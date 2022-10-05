@@ -2,11 +2,16 @@ import { defineNuxtConfig } from 'nuxt'
 
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
   ],
+  content: {
+    // https://content.nuxtjs.org/api/configuration
+    documentDriven: true,
+  },
   experimental: {
     reactivityTransform: true,
     viteNode: false,
